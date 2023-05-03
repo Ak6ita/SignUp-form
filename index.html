@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form class="signup-form">
+        <h1 class="title">Sign up</h1>
+        <div class="inputContainer">
+            <input type="text" id="name" class="default required-input">
+            <label for="name" class="label">UserName:</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputContainer">
+            <input type="text" id="email" class="default required-input">
+            <label for="email" class="label">Email:</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputContainer">
+            <input type="password" id="password" class="default required-input">
+            <label for="password" class="label">Password:</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputContainer">
+            <input type="password" id="confirm-password" class="default required-input">
+            <label for="confirm-password" class="label">Confirm-Password:</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputSex">
+            <p>Sex:</p>
+            <input type="radio" id="male" value="male" name="gender">
+            <label for="male" class="label">Male</label>
+            <input type="radio" id="female" value="female" name="gender">
+            <label for="female" class="label">Female</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputContainer">
+            <input type="date" id="date-of-birth" class="default required-input">
+            <label for="date-of-birth" class="label">Date of Birth:</label>
+            <p class="error hidden"></p>
+        </div>
+        <div class="inputContainer">
+            <select id="diet-preferences" class="default required-input">
+                <option value="none">None</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+                <option value="pescatarian">Pescatarian</option>
+            </select>
+            <label for="diet-preferences" class="label">Diet Preferences:</label>
+            <p class="error hidden"></p>
+        </div>
+
+        <button class="submitBtn">Sign up</button>
+    </form>
+    <div class="table-wrapper">
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>UserName</th>
+                    <th>Email</th>
+                    <th>Sex</th>
+                    <th>Date of Birth</th>
+                    <th>Diet Preferences</th>
+                    <th>Delete</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="row1">
+                    <td data-id="username">TamaraJ</td>
+                    <td data-id="email">tamara.janakievska@yahoo.com</td>
+                    <td data-id="sex">Female</td>
+                    <td>1997-10-30</td>
+                    <td>Vegeterian</td>
+                    <td><button class="delete-button">Delete</button></td>
+                    <td><button class="edit-button">Edit</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div class="modal" id="exampleModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Table</h5>
+                    <button class="close-button">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form id="edit-form">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username">
+                        <label for="email">Email:</label>
+                        <input type="email" id="emailSecond" name="email">
+                        <label for="sex">Sex:</label>
+                        <select id="sex" name="sex">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <div class="dob">
+                            <label for="dob">Date of Birth:</label>
+                            <input type="date" id="dob" name="dob">
+                        </div>
+                        <label for="diet">Diet Preferences:</label>
+                        <input type="text" id="diet" name="diet">
+                        <button type="submit" value="Save">Save Info</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="modal-backdrop fade show" id="backdrop" style="display: none;"></div>
+        <script src="index.js"></script>
+</body>
+
+</html>

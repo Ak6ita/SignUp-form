@@ -1,0 +1,291 @@
+.signup-form {
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    box-shadow: 0 10px 25px rgba(92, 99, 105, .2);
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.inputContainer {
+    position: relative;
+    height: 60px;
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.inputSex {
+    margin-bottom: 28px;
+}
+
+label[for="male"],
+label[for="female"] {
+    position: initial;
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+.default {
+    top: 8px;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 0 5px;
+    outline: none;
+    background: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.default:focus {
+    border: 2px solid purple;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    padding: 13px 20px 0px 7px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.default:focus+label {
+    top: -28px;
+    font-size: 14px;
+    color: purple;
+}
+
+label[for="date-of-birth"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    padding: 13px 20px 0px 7px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+.default:focus+label[for="date-of-birth"] {
+    top: -28px;
+    font-size: 14px;
+    color: purple;
+}
+
+#diet-preferences {
+    top: 8px;
+    left: 0px;
+    height: 43px;
+    width: 100%;
+    border: 1px solid #DADCE0;
+    border-radius: 7px;
+    font-size: 15px;
+    padding: 0 5px;
+    outline: none;
+    background: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#diet-preferences:focus {
+    border: 2px solid purple;
+}
+
+label[for="diet-preferences"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0;
+    padding: 20px 20px 0px 7px;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+#diet-preferences:focus+label[for="diet-preferences"] {
+    top: -35px;
+    font-size: 14px;
+    color: purple;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.movedUp {
+    top: -28px;
+    font-size: 14px;
+    color: purple;
+}
+
+
+.required-input {
+    border: 2px solid red;
+}
+
+#diet-preferences.required-input {
+    border: 2px solid red;
+}
+
+.submitBtn {
+    display: block;
+    margin-left: auto;
+    padding: 15px 30px;
+    border: none;
+    background-color: purple;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 30px;
+}
+
+.submitBtn:hover {
+    background-color: #9867C5;
+    transform: translateY(-2px);
+}
+
+.table-wrapper {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.delete-button {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: rgb(186, 186, 2);
+    color: black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 6px 12px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: 50px auto;
+    font-size: 16px;
+    font-weight: 400;
+    border: 1px solid #ddd;
+}
+
+thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 12px;
+}
+
+th {
+    border-bottom: 2px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styles for the modal backdrop */
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Styles for the modal dialog */
+#exampleModal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    display: none;
+}
+
+/* Styles for the modal header */
+.modal-header {
+    background-color: purple;
+    color: #fff;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.modal-body input {
+    display: block;
+    width: 90%;
+    margin-bottom: 15px;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: purple;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #9867C5;
+    transform: translateY(-2px);
+}
+
+.dob {
+    padding-top: 10px
+}
